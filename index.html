@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 👈 EDIT: put your name between the <title> tags (this shows on the browser tab) -->
+<title>My First Web Page</title>
+
+<!--
+  =====================================================================
+  👋 HELLO! THIS IS YOUR PROJECT FILE.
+
+  This is the file you'll put under Git and push to GitHub.
+  You do NOT need to understand all the code. Just edit the parts
+  marked with   👈 EDIT   and save the file (Ctrl+S / Cmd+S).
+
+  To see your changes: double-click this file to open it in your
+  browser, edit + save, then refresh the browser (F5).
+
+  💡 COMMIT IDEAS — make these changes ONE AT A TIME, and do a Git
+     commit after each one (that's how you practise!):
+        1. Put your real name in the title + heading
+        2. Write your "About Me" paragraph
+        3. Add your real hobbies to the list
+        4. Change the main colour (see --main below)
+        5. Add your fun fact and your goal
+  =====================================================================
+-->
+
+<style>
+  :root {
+    /* 👈 EDIT: try #4fc3f7 (blue), #4ade80 (green), #a78bfa (purple), #f5a623 (gold) */
+    --main: #f0593c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #0d1018; color: #e8eaf0; line-height: 1.7;
+    display: flex; justify-content: center; padding: 2rem 1rem; min-height: 100vh;
+  }
+  .card {
+    background: #161b2b; border: 1px solid #262c44; border-radius: 18px;
+    max-width: 540px; width: 100%; padding: 2.2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  }
+  .avatar {
+    width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 1rem;
+    background: var(--main); display: flex; align-items: center; justify-content: center;
+    font-size: 2.3rem; font-weight: 800; color: #fff;
+  }
+  h1 { text-align: center; font-size: 1.9rem; }
+  .tagline { text-align: center; color: var(--main); font-weight: 600; margin-bottom: 1.4rem; }
+  h2 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; color: #8892b0; margin: 1.5rem 0 0.6rem; }
+  p { color: #c5cae0; }
+  ul { list-style: none; }
+  li { padding: 0.3rem 0 0.3rem 1.5rem; position: relative; color: #c5cae0; }
+  li::before { content: "▹"; position: absolute; left: 0; color: var(--main); font-weight: 700; }
+  .fact { background: #0d1018; border-left: 3px solid var(--main); border-radius: 8px; padding: 0.9rem 1.1rem; }
+  button { background: var(--main); color: #fff; border: none; border-radius: 8px; padding: 0.55rem 1.1rem; font-size: 0.9rem; cursor: pointer; font-weight: 600; }
+  footer { text-align: center; color: #5a647e; margin-top: 1.8rem; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- 👈 EDIT: put YOUR initials here (for example: RS) -->
+    <div class="avatar">A</div>
+
+    <!-- 👈 EDIT: put your name here -->
+    <h1>Your Name Here</h1>
+
+    <!-- 👈 EDIT: one short line about you -->
+    <p class="tagline">Future software engineer 🚀</p>
+
+    <h2>About Me</h2>
+    <!-- 👈 EDIT: write 2–3 sentences about yourself -->
+    <p>Write a little about yourself here — where you're from, what you enjoy,
+       and what made you curious about technology.</p>
+
+    <h2>My Hobbies</h2>
+    <ul>
+      <!-- 👈 EDIT: change these to your real hobbies -->
+      <li>Hobby one</li>
+      <li>Hobby two</li>
+      <li>Hobby three</li>
+    </ul>
+
+    <h2>What I'm Learning</h2>
+    <!-- 👈 EDIT -->
+    <p>How software really works — frontend, backend, databases, and now Git &amp; GitHub!</p>
+
+    <h2>Fun Fact</h2>
+    <div class="fact">
+      <!-- 👈 EDIT: write your fun fact in the line below -->
+      <span id="fact" style="display:none;">I once ________________ !</span>
+      <button onclick="document.getElementById('fact').style.display='inline'; this.style.display='none';">
+        Reveal my fun fact
+      </button>
+    </div>
+
+    <footer>Built by me · <span id="year"></span></footer>
+  </div>
+
+  <script>
+    // This just shows the current year in the footer. You can ignore it!
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
